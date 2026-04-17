@@ -33,7 +33,7 @@ class NewsService {
 
     try {
       final uri = _buildUri(
-        '$_baseUrl/top-headlines?country=us&category=$category&apiKey=$_apiKey',
+        '$_baseUrl/top-headlines?country=us&category=$category&pageSize=7&apiKey=$_apiKey',
       );
 
       final response = await http.get(uri).timeout(_timeout);
